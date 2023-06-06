@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'europe-west3-docker.pkg.dev/$PROJECT_ID/$REPO_NAME', '.']
+  args: ['build', '-t', 'europe-west3-docker.pkg.dev/admin-etudiants/cloudshell/cloudshell', '.']
 - name: 'gcr.io/cloudshell-images/custom-image-validation'
-  args: ['image_test.py', '--image', 'europe-west3-docker.pkg.dev/$PROJECT_ID/$REPO_NAME']
-images: ['europe-west3-docker.pkg.dev/$PROJECT_ID/$REPO_NAME']
+  args: ['image_test.py', '--image', 'europe-west3-docker.pkg.dev/admin-etudiants/cloudshell/cloudshell']
+images: ['europe-west3-docker.pkg.dev/admin-etudiants/cloudshell/cloudshell']
 timeout: '1200s'
